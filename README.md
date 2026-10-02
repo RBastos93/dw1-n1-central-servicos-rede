@@ -8,8 +8,8 @@ avaliação individual (N1) da disciplina, a partir dos wireframes em `docs/`.
 
 ## Links
 
-- **Repositório (GitHub):** <!-- TODO: cole aqui a URL do repositório público -->
-- **Aplicação publicada (GitHub Pages):** <!-- TODO: cole aqui a URL do GitHub Pages -->
+- **Repositório (GitHub):** https://github.com/RBastos93/dw1-n1-central-servicos-rede
+- **Aplicação publicada (GitHub Pages):** https://rbastos93.github.io/dw1-n1-central-servicos-rede/
 
 ## Páginas
 
@@ -52,8 +52,9 @@ Cada página importa os arquivos nesta ordem:
 - **HTML semântico** — `header`, `nav`, `main`, `section`, `article`/`li`,
   `fieldset`/`legend`, `footer`.
 - **CSS separado por responsabilidade** — reset, global e um arquivo por página.
-- **Flexbox** — cabeçalho, navegação, grade de cartões (`index`), indicadores,
-  filtros e cartões de chamado.
+- **Flexbox** — usado em todo o layout: cabeçalho, navegação, grade de cartões
+  (`index`), indicadores, filtros, cartões de chamado e as grades de campos do
+  formulário (sem uso de CSS Grid).
 - **Box Model + `box-sizing: border-box`** — aplicado globalmente no `reset.css`.
 - **Medidas relativas** — tipografia e espaçamentos em `rem`; larguras em `%`.
 - **Contêiner fluido** — `.app` com `max-width` e centralização, adaptando-se à
@@ -63,7 +64,8 @@ Cada página importa os arquivos nesta ordem:
 - **Media queries** — pontos de quebra em 992px, 768px e 560px.
 - **Formulários HTML + validações nativas** — `required`, `minlength`,
   `maxlength`, `pattern`, `accept` e tipos adequados (`email`, `tel`,
-  `datetime-local`, `file`).
+  `datetime-local`, `file`). O formulário de abertura usa `method="post"` com
+  `enctype="multipart/form-data"`, evitando expor os dados na URL.
 - **Navegação consistente** — mesmo menu nas três páginas, com destaque visual
   da página atual (`.nav__item--ativo` + `aria-current="page"`).
 
@@ -92,8 +94,11 @@ etapa de build.
 
 ## Dificuldades encontradas
 
-<!-- TODO: descreva brevemente as dificuldades encontradas durante o desenvolvimento. -->
+- Utilizar a semântica do HTML5 (`header`, `nav`, `main`, `section`, `footer`,
+  `fieldset`), já que estou mais acostumado a estruturar as páginas apenas com
+  `div`. Foi preciso identificar o elemento semântico mais adequado para cada
+  parte do layout em vez de recorrer a `div` por padrão.
 
 ## Partes não concluídas
 
-<!-- TODO: liste aqui as partes não concluídas, caso existam. Se tudo foi concluído, escreva "Nenhuma". -->
+Nenhuma. Todos os itens solicitados foram implementados.
