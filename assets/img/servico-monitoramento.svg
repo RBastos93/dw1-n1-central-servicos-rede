@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" role="img" aria-label="Monitoramento">
+  <rect width="400" height="220" fill="#dbe7f5"/>
+  <rect x="110" y="60" width="180" height="110" rx="8" fill="#ffffff" stroke="#1b3a7a" stroke-width="6"/>
+  <polyline points="128,140 160,110 190,128 220,86 262,112"
+            fill="none" stroke="#4db5e8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="170" y1="180" x2="230" y2="180" stroke="#1b3a7a" stroke-width="6" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" role="img" aria-label="Segurança">
+  <rect width="400" height="220" fill="#dbe7f5"/>
+  <path d="M200 50 l55 22 v45 c0 40 -30 62 -55 73 c-25 -11 -55 -33 -55 -73 v-45 z"
+        fill="#ffffff" stroke="#1b3a7a" stroke-width="6"/>
+  <path d="M178 112 l16 16 l30 -34" fill="none" stroke="#4db5e8" stroke-width="8"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

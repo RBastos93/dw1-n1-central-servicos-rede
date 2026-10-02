@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamados — Central de Serviços de Rede</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/chamados.css">
+</head>
+<body>
+  <div class="app">
+    <header class="cabecalho">
+      <div>
+        <h1 class="cabecalho__titulo">Central de Chamados</h1>
+        <p class="cabecalho__subtitulo">Registro e acompanhamento de solicitações técnicas</p>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav__item">Início</a>
+        <a href="chamados.html" class="nav__item nav__item--ativo">Chamados</a>
+        <a href="abrir-chamado.html" class="nav__item">Abrir chamado</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="visao-geral">
+        <h2 class="secao-titulo">Visão geral</h2>
+        <article class="indicadores">
+          <section class="indicador indicador--abertos">
+            <span class="indicador__rotulo">Abertos</span>
+            <span class="indicador__valor">3</span>
+          </section>
+          <section class="indicador indicador--pendentes">
+            <span class="indicador__rotulo">Pendentes</span>
+            <span class="indicador__valor">2</span>
+          </section>
+          <section class="indicador indicador--concluidos">
+            <span class="indicador__rotulo">Concluídos</span>
+            <span class="indicador__valor">5</span>
+          </section>
+        </article>
+      </section>
+
+      <section class="filtros" aria-label="Pesquisar chamados">
+        <h2 class="filtros__titulo">Pesquisar chamados</h2>
+        <form class="filtros__form">
+          <div class="campo">
+            <label for="palavra-chave">Palavra-chave</label>
+            <input type="search" id="palavra-chave" name="palavra-chave" maxlength="60" placeholder="Internet, roteador ou Wi-Fi">
+          </div>
+
+          <div class="campo">
+            <label for="categoria">Categoria</label>
+            <select id="categoria" name="categoria">
+              <option value="">Todas</option>
+              <option value="rede">Rede</option>
+              <option value="suporte">Suporte técnico</option>
+              <option value="seguranca">Segurança</option>
+              <option value="monitoramento">Monitoramento</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="prioridade">Prioridade</label>
+            <select id="prioridade" name="prioridade">
+              <option value="">Todas</option>
+              <option value="baixa">Baixa</option>
+              <option value="media">Média</option>
+              <option value="alta">Alta</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="status">Status</label>
+            <select id="status" name="status">
+              <option value="">Todos</option>
+              <option value="aberto">Aberto</option>
+              <option value="pendente">Pendente</option>
+              <option value="concluido">Concluído</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="data-inicial">Data inicial</label>
+            <input type="date" id="data-inicial" name="data-inicial">
+          </div>
+
+          <div class="campo">
+            <label for="data-final">Data final</label>
+            <input type="date" id="data-final" name="data-final">
+          </div>
+
+          <div class="campo">
+            <label for="horario">Horário</label>
+            <input type="time" id="horario" name="horario">
+          </div>
+
+          <div class="filtros__acoes">
+            <button type="submit" class="btn btn--primario">Pesquisar</button>
+            <button type="reset" class="filtros__limpar">Limpar filtros</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="resultados">
+        <div class="resultados__topo">
+          <div>
+            <h2 class="secao-titulo">Chamados encontrados</h2>
+            <p class="texto-suave">Solicitações cadastradas na Central de Serviços</p>
+          </div>
+          <a class="btn btn--primario" href="abrir-chamado.html">Abrir novo chamado</a>
+        </div>
+
+        <ul class="lista-chamados">
+          <li class="chamado chamado--aberto">
+            <div class="chamado__info">
+              <span class="chamado__codigo">Chamado #001</span>
+              <h3 class="chamado__titulo">Laboratório sem acesso à internet</h3>
+              <p class="chamado__meta">Rede - Prioridade alta - Maria da Silva - 02/10/2026 às 19h30</p>
+            </div>
+            <span class="tag tag--aberto">Aberto</span>
+          </li>
+
+          <li class="chamado chamado--pendente">
+            <div class="chamado__info">
+              <span class="chamado__codigo">Chamado #002</span>
+              <h3 class="chamado__titulo">Atualização do antivírus</h3>
+              <p class="chamado__meta">Segurança - Prioridade média - João Pereira - 01/10/2026 às 14h10</p>
+            </div>
+            <span class="tag tag--pendente">Pendente</span>
+          </li>
+
+          <li class="chamado chamado--concluido">
+            <div class="chamado__info">
+              <span class="chamado__codigo">Chamado #003</span>
+              <h3 class="chamado__titulo">Troca de cabo de rede da sala 12</h3>
+              <p class="chamado__meta">Rede - Prioridade baixa - Ana Souza - 29/09/2026 às 09h45</p>
+            </div>
+            <span class="tag tag--concluido">Concluído</span>
+          </li>
+
+          <li class="chamado chamado--aberto">
+            <div class="chamado__info">
+              <span class="chamado__codigo">Chamado #004</span>
+              <h3 class="chamado__titulo">Impressora da secretaria não imprime</h3>
+              <p class="chamado__meta">Suporte técnico - Prioridade média - Carlos Lima - 02/10/2026 às 11h20</p>
+            </div>
+            <span class="tag tag--aberto">Aberto</span>
+          </li>
+
+          <li class="chamado chamado--concluido">
+            <div class="chamado__info">
+              <span class="chamado__codigo">Chamado #005</span>
+              <h3 class="chamado__titulo">Lentidão no Wi-Fi do bloco administrativo</h3>
+              <p class="chamado__meta">Monitoramento - Prioridade alta - Fernanda Rocha - 28/09/2026 às 16h05</p>
+            </div>
+            <span class="tag tag--concluido">Concluído</span>
+          </li>
+
+          <li class="chamado chamado--pendente">
+            <div class="chamado__info">
+              <span class="chamado__codigo">Chamado #006</span>
+              <h3 class="chamado__titulo">Bloqueio de site indevido no firewall</h3>
+              <p class="chamado__meta">Segurança - Prioridade baixa - Pedro Alves - 30/09/2026 às 08h30</p>
+            </div>
+            <span class="tag tag--pendente">Pendente</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>Rodrigo Bastos - Redes - Web I - IFC Araquari</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+.apresentacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  background: linear-gradient(180deg, #eef5fc 0%, #e4eff9 100%);
+  border: 1px solid #d6e6f5;
+  border-radius: var(--raio);
+  padding: 32px 36px;
+}
+
+.apresentacao__titulo {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: var(--preto-texto);
+}
+
+.apresentacao__texto {
+  flex: 1 1 420px;
+}
+
+.servicos {
+  margin-top: 36px;
+}
+
+.servicos__titulo {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.card {
+  flex: 1 1 calc(25% - 15px);
+  min-width: 220px;
+  border: 1px solid var(--cinza-borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+  background-color: var(--branco);
+  box-shadow: var(--sombra-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(16, 24, 40, 0.1);
+}
+
+.card__imagem {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  background-color: #e3e9f1;
+}
+
+.card__corpo {
+  padding: 18px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card__categoria {
+  align-self: flex-start;
+  background-color: #e2eafb;
+  color: var(--azul-medio);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 4px 12px;
+  border-radius: var(--raio-pill);
+}
+
+.card__titulo {
+  font-size: 1.15rem;
+  color: var(--preto-texto);
+}
+
+.card__link {
+  margin-top: 4px;
+  color: var(--azul-escuro);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.card__link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .card {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 24px;
+  }
+
+  .hero__titulo {
+    font-size: 1.6rem;
+  }
+
+  .hero .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}

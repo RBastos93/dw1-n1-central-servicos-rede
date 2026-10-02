@@ -1,0 +1,235 @@
+.indicadores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 18px;
+}
+
+.indicador {
+  flex: 1 1 calc(33.333% - 14px);
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: var(--raio);
+  padding: 22px 26px;
+  border: 1px solid transparent;
+}
+
+.indicador__rotulo {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-size: 0.85rem;
+}
+
+.indicador__valor {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.indicador--abertos {
+  background-color: var(--vermelho-bg);
+  border-color: var(--vermelho-borda);
+  color: var(--vermelho-txt);
+}
+
+.indicador--pendentes {
+  background-color: var(--amarelo-bg);
+  border-color: var(--amarelo-borda);
+  color: var(--amarelo-txt);
+}
+
+.indicador--concluidos {
+  background-color: var(--verde-bg);
+  border-color: var(--verde-borda);
+  color: var(--verde-txt);
+}
+
+.filtros {
+  margin-top: 32px;
+  background-color: var(--cinza-card);
+  border: 1px solid var(--cinza-borda);
+  border-radius: var(--raio);
+  padding: 26px 28px;
+}
+
+.filtros__titulo {
+  color: var(--azul-escuro);
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+}
+
+.filtros__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 20px;
+  align-items: flex-end;
+}
+
+.filtros__form .campo {
+  flex: 1 1 calc(25% - 15px);
+  min-width: 180px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo label {
+  font-size: 0.85rem;
+  color: var(--cinza-texto);
+}
+
+.campo input,
+.campo select {
+  padding: 11px 14px;
+  border: 1px solid var(--cinza-borda-2);
+  border-radius: var(--raio-sm);
+  background-color: var(--branco);
+}
+
+.campo input:focus,
+.campo select:focus {
+  outline: 2px solid var(--azul-claro);
+  outline-offset: 1px;
+  border-color: var(--azul-claro);
+}
+
+.filtros__acoes {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.filtros__limpar {
+  color: var(--azul-escuro);
+  font-weight: 700;
+}
+
+.filtros__limpar:hover {
+  text-decoration: underline;
+}
+
+.resultados {
+  margin-top: 32px;
+}
+
+.resultados__topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.lista-chamados {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.chamado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: var(--branco);
+  border: 1px solid var(--cinza-borda);
+  border-left-width: 5px;
+  border-radius: var(--raio);
+  padding: 18px 22px;
+  box-shadow: var(--sombra-card);
+}
+
+.chamado--aberto {
+  border-left-color: var(--vermelho-borda);
+}
+
+.chamado--pendente {
+  border-left-color: var(--amarelo-borda);
+}
+
+.chamado--concluido {
+  border-left-color: var(--verde-borda);
+}
+
+.chamado__codigo {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--cinza-texto);
+}
+
+.chamado__titulo {
+  font-size: 1.15rem;
+  margin: 4px 0;
+  color: var(--preto-texto);
+}
+
+.chamado__meta {
+  font-size: 0.9rem;
+  color: var(--cinza-texto);
+}
+
+.tag {
+  flex-shrink: 0;
+  padding: 7px 16px;
+  border-radius: var(--raio-pill);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.tag--aberto {
+  background-color: var(--vermelho-bg);
+  color: var(--vermelho-txt);
+}
+
+.tag--pendente {
+  background-color: var(--amarelo-bg);
+  color: var(--amarelo-txt);
+}
+
+.tag--concluido {
+  background-color: var(--verde-bg);
+  color: var(--verde-txt);
+}
+
+@media (max-width: 992px) {
+  .filtros__form .campo {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .filtros__acoes {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .indicador {
+    flex: 1 1 100%;
+  }
+
+  .filtros__form .campo {
+    flex: 1 1 100%;
+  }
+
+  .resultados__topo .btn {
+    width: 100%;
+  }
+
+  .chamado {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

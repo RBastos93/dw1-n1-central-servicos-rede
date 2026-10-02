@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abrir chamado — Central de Serviços de Rede</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/abrir-chamado.css">
+</head>
+<body>
+  <div class="app">
+    <header class="cabecalho">
+      <div>
+        <h1 class="cabecalho__titulo">Central de Chamados</h1>
+        <p class="cabecalho__subtitulo">Registro e acompanhamento de solicitações técnicas</p>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav__item">Início</a>
+        <a href="chamados.html" class="nav__item">Chamados</a>
+        <a href="abrir-chamado.html" class="nav__item nav__item--ativo">Abrir chamado</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="form-intro">
+        <p class="eyebrow">Abertura de solicitação</p>
+        <h2 class="form-intro__titulo">Abrir novo chamado</h2>
+        <p class="texto-suave">Os campos marcados com <span class="obrigatorio">*</span> são obrigatórios.</p>
+      </div>
+
+      <form class="form-painel" method="post" action="#" enctype="multipart/form-data" novalidate>
+        <fieldset class="form-secao">
+          <legend class="form-secao__titulo">1. Dados do solicitante</legend>
+          <div class="form-grid">
+            <div class="campo">
+              <label for="nome">Nome completo <span class="obrigatorio">*</span></label>
+              <input type="text" id="nome" name="nome" minlength="3" maxlength="80"
+                     autocomplete="name" required>
+            </div>
+            <div class="campo">
+              <label for="email">E-mail <span class="obrigatorio">*</span></label>
+              <input type="email" id="email" name="email" maxlength="120"
+                     autocomplete="email" placeholder="nome@exemplo.com" required>
+            </div>
+            <div class="campo">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" maxlength="15"
+                     autocomplete="tel" placeholder="(00) 00000-0000"
+                     pattern="[0-9()\s\-]{8,15}">
+            </div>
+            <div class="campo">
+              <label for="ocorrencia">Data e hora da ocorrência <span class="obrigatorio">*</span></label>
+              <input type="datetime-local" id="ocorrencia" name="ocorrencia" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-secao">
+          <legend class="form-secao__titulo">2. Informações do chamado</legend>
+          <div class="form-grid form-grid--tres">
+            <div class="campo">
+              <label for="categoria">Categoria <span class="obrigatorio">*</span></label>
+              <select id="categoria" name="categoria" required>
+                <option value="">Selecione</option>
+                <option value="rede">Rede</option>
+                <option value="suporte">Suporte técnico</option>
+                <option value="seguranca">Segurança</option>
+                <option value="monitoramento">Monitoramento</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label>Prioridade <span class="obrigatorio">*</span></label>
+              <div class="radios">
+                <label><input type="radio" name="prioridade" value="baixa" required> Baixa</label>
+                <label><input type="radio" name="prioridade" value="media"> Média</label>
+                <label><input type="radio" name="prioridade" value="alta"> Alta</label>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="anexo">Anexo</label>
+              <input type="file" id="anexo" name="anexo"
+                     accept=".jpg,.jpeg,.png,.pdf,image/*,application/pdf">
+            </div>
+
+            <div class="campo campo--largo">
+              <label for="descricao">Descrição do problema <span class="obrigatorio">*</span></label>
+              <textarea id="descricao" name="descricao" minlength="10" maxlength="500"
+                        placeholder="Explique o que aconteceu..." required></textarea>
+            </div>
+
+            <div class="campo campo--largo">
+              <label>Equipamentos ou serviços afetados</label>
+              <div class="checkboxes">
+                <label><input type="checkbox" name="equipamentos" value="computador"> Computador</label>
+                <label><input type="checkbox" name="equipamentos" value="impressora"> Impressora</label>
+                <label><input type="checkbox" name="equipamentos" value="rede"> Rede</label>
+                <label><input type="checkbox" name="equipamentos" value="sistema"> Sistema</label>
+              </div>
+            </div>
+
+            <div class="form-rodape">
+              <label class="confirmacao">
+                <input type="checkbox" name="confirmacao" required>
+                Confirmo que as informações fornecidas são verdadeiras. <span class="obrigatorio">*</span>
+              </label>
+              <div class="form-botoes">
+                <button type="reset" class="btn btn--secundario">Limpar</button>
+                <button type="submit" class="btn btn--primario">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+
+    <footer class="rodape">
+      <p>Rodrigo Bastos - Redes - Web I - IFC Araquari</p>
+    </footer>
+  </div>
+</body>
+</html>
